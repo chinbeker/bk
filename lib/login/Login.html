@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="windows-Target" contect="_top" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>教务管理系统</title>
+    <link rel="shortcut icon" type="image/x-icon" sizes="64x64" href="https://a.chinbeker.vip:5152/img/logo/school_64x64.ico" />
+    <link rel="icon" type="image/x-icon" sizes="64x64" href="https://a.chinbeker.vip:5152/img/logo/school_64x64.ico" />
+    <link rel="apple-touch-icon-precomposed" type="image/x-icon" sizes="180x180" href="https://a.chinbeker.vip:5152/img/logo/school_180x180.ico" />
+    <meta name="application-name" content="教务系统" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="color-scheme" content="only light" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="browsermode" content="application" />
+    <meta name="x5-page-mode" content="app" />
+    <meta name="keywords" content="教务管理系统,教学常规,教学管理" />
+    <meta name="author" content="CHINBEKER" />
+    <meta name="description" content="教务管理系统" />
+    <meta name="robots" content="none" />
+    <link rel="stylesheet" type="text/css" href="https://a.chinbeker.vip:5152/css/base.css" charset="utf-8" />
+    <script type="application/javascript" src="https://a.chinbeker.vip:5152/js/dync.js" charset="utf-8"></script>
+    <script type="application/javascript" src="https://a.chinbeker.vip:5152/js/encrypt.js" charset="utf-8"></script>
+    <script type="application/javascript" src="https://a.chinbeker.vip:5152/js/login.js" charset="utf-8" defer></script>
+    <style type="text/css">
+        :root {
+            --button-backg-color: rgb(213,100,86);
+            --button-hover-color: rgb(192,93,80);
+            --button-active-color: rgb(175,79,67);
+        }
+        form, fieldset, legend, label, input, button {box-sizing: border-box;}
+        html, body, .container {height: 100%;}
+        .container {display: flex;flex-direction: column;justify-content: space-between;}
+        header, footer {flex: none;}
+        h1 {font-size: 1.5em;color: rgb(172,95,89);}
+        h1 > span {vertical-align: middle;}
+        .logo, .back-img {background-repeat: no-repeat;background-size: contain;background-position: center;}
+        .logo {display: inline-block;margin-left: 0.6em;margin-right: 0.25em;width: 1.8rem;height: 1.8rem;}
+        .logo {background-image: url("https://a.chinbeker.vip:5152/img/logo/school_180x180.ico");}
+        main {flex: auto;display: flex;justify-content: space-between;}
+        .portrait main {flex-direction: column;align-items: center;}
+        .main-back {display: flex;flex: 0 1 50%;justify-content: center;}
+        .main-form {display: flex;flex: 0 1 48%;justify-content: center;align-items: center;}
+        .portrait .main-back {flex: none;width: 100%;height: 23em;align-items: center;}
+        .portrait .main-form {flex: auto;width: 100%;align-items: flex-start;}
+        .back-img {width: 72%;max-width: 46em;min-width: 35em;height: 100%;}
+        .portrait .back-img {width: 100%;max-width: none;min-width: auto;height: 100%;}
+        .back-img {background-image: url("https://a.chinbeker.vip:5152/img/school/back/login.png");}
+        .login-box {padding: 3.2em;width: 20%;min-width: 28em;}
+        .login-box {border: 1px solid rgb(195,195,195);border-radius: 0.25em 0.25em;background-color: white;}
+        .portrait .login-box {padding: 3em;margin-block: 1.3em;width: 90%;min-width: auto;max-width: 29.2em;}
+        fieldset {margin: 0;padding: 0;width: 100%;border: none;}
+        legend {padding: 0;font-size: 1.45em;font-weight: bold;color: rgb(214,135,55);}
+        .form-account {margin-top: 3.5em;}
+        .portrait .form-account {margin-top: 2.8em;}
+        .form-password {margin-top: 0.45em;}
+        label {display: block;}
+        input[type="search"], input[type="password"] {
+            padding: 0.8em 0.6em;
+            width: 100%;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204,204,204);
+            border-radius: 0.22em;
+            background-color: white;
+        }
+        .form-submit {margin-block: 0.8em;}
+        .form-submit > button[type="button"] {width: 100%;line-height: 2.8em;}
+        .text-danger {padding-left: 0.1em;font-size: 0.9em;line-height: 1em;word-break: break-all;color: red;}
+    </style>
+</head>
+<body>
+<div class="container">
+<header>
+    <h1 inert><span class="logo"></span><span>&#x6559;&#x52A1;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</span></h1>
+</header>
+<main>
+<div class="main-back"><div class="back-img" inert></div></div>
+<div class="main-form">
+<div id="Login" class="login-box">
+<fieldset>
+    <legend inert>&#x7528;&#x6237;&#x767B;&#x5F55;</legend>
+    <div class="form-account">
+        <div><label><span></span><input type="search" required autocomplete="off" autofocus placeholder="&#x7528;&#x6237;&#x540D;" data-val="true" data-val-maxlength="&#x8D26;&#x53F7;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;30&#x4F4D;" data-val-maxlength-max="30" data-val-minlength="&#x8D26;&#x53F7;&#x4E0D;&#x80FD;&#x5C11;&#x4E8E;4&#x4F4D;" data-val-minlength-min="4" data-val-required="&#x8BF7;&#x8F93;&#x5165;&#x8D26;&#x53F7;" id="Account" maxlength="30" name="Account" value=""></label></div>
+        <div><span class="text-danger field-validation-valid" inert data-valmsg-for="Account" data-valmsg-replace="true"></span></div>
+    </div>
+    <div class="form-password">
+        <div><label><span></span><input required autocomplete="off" placeholder="&#x5BC6;&#x7801;" type="password" data-val="true" data-val-maxlength="&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;20&#x4F4D;" data-val-maxlength-max="20" data-val-minlength="&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x5C11;&#x4E8E;6&#x4F4D;" data-val-minlength-min="6" data-val-required="&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;" id="Password" maxlength="20" name="Password"></label></div>
+        <div><span class="text-danger field-validation-valid" inert data-valmsg-for="Password" data-valmsg-replace="true"></span></div>
+    </div>
+    <div class="form-secretkey">
+        <input type="hidden" required data-val="true" data-val-required="&#x83B7;&#x53D6;&#x5BC6;&#x94A5;&#x5931;&#x8D25;" id="Key" name="Key" value="7A46DD7AA3BD5E2B2348EDC5807453469E96F23F1B3276BD82F00B2C69A64470" />
+    </div>
+    <div class="form-validate">
+        <span class="text-danger" data-validation-summary="Login" inert></span>
+    </div>
+    <div class="form-submit">
+        <button type="button" value="Login">&#x767B;&#x5F55;</button>
+    </div>
+</fieldset>
+</div>
+</div>
+</main>
+<footer>
+</footer>
+</div>
+</body>
+</html>
