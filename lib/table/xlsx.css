@@ -1,0 +1,113 @@
+@charset "utf-8";
+html {
+    --table-font-size: 0.81em;
+    --table-border-left-style: solid;
+    --table-border-right-style: none;
+    --table-order-display: table-cell;
+    --table-order-width: 3.5em;
+    --table-grid-thead-border-color: #BEBEBE;
+    --table-grid-thead-bgcolor: #DFE3E8;
+    --table-grid-th-border-color: #BEBEBE;
+    --table-grid-th-height: 0.35em;
+    --table-grid-td-height: 0.35em;
+    --table-th-font-color: inherit;
+    --table-td-font-color: inherit;
+    --table-td-border-color: #E0E0E0;
+    --table-tr-border-color: #E5E5E5;
+    --table-tr-even-bgcolor: #EDF2FF;
+    --table-grid-tr-hover-color: #C7D1F5;
+}
+table, thead, tbody, tfoot, tr, th, td, caption, colgroup, col {box-sizing: border-box;}
+table {min-width: 100%;font-size: var(--table-font-size);border-collapse: collapse;border-spacing: 0;background-color: white;}
+caption {font-size: 1.2em;font-weight: bold;line-height: 2em;}
+thead {position: sticky;top: 0;z-index: 3;}
+th, td {padding-left: 0.6em;padding-right: 0.6em;white-space: nowrap;word-break: break-all;}
+th {font-size: 0.88em;font-weight: normal;color: #21737E;}
+td {min-width: 5.2em;min-height: 1.8em;vertical-align: middle;color: inherit;background-color: inherit;}
+
+table.xlsx th {padding-block: 0.28em;background-color: #F0F0F0;}
+table.xlsx > tfoot td {padding-block: 0.1em;background-color: #F0F0F0;}
+table.xlsx > tbody td {padding-block: 0.1em;}
+
+td > span:not(:first-of-type) {margin-left: 0.8em;}
+td > span > a {text-decoration-line: none;color: rgb(80,110,255);}
+table.xlsx {border-bottom: 1px solid var(--table-grid-thead-border-color);}
+table.xlsx > thead {
+    border-width: 0 1px 1px 1px;
+    border-top-style: none;
+    border-left-style: var(--table-border-left-style);
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--table-grid-thead-border-color);
+}
+table.xlsx > thead > tr:not(:last-of-type) {border-bottom: 1px solid var(--table-grid-th-border-color);}
+table.xlsx > thead > tr > th:not(:last-of-type) {border-right: 1px solid var(--table-grid-th-border-color);}
+table.xlsx > tbody {font-family: serif,sans-serif;}
+
+table.xlsx > tbody > tr:not(:last-of-type) {border-bottom: 1px solid var(--table-td-border-color);}
+table.xlsx > tbody > tr > td {border-right: 1px solid var(--table-td-border-color);}
+table.xlsx > tbody > tr > td:first-of-type {
+    border-left-width: 1px;
+    border-left-style: var(--table-border-left-style);
+    border-left-color: var(--table-td-border-color);
+}
+table.xlsx > tfoot {
+    border-width: 1px 1px 0 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-left-style: var(--table-border-left-style);
+    border-color: var(--table-grid-thead-border-color);
+}
+table.xlsx > thead, table.xlsx > tfoot {background-color: var(--table-grid-thead-bgcolor);}
+tbody {counter-reset: ordernum;}
+table.xlsx > thead > tr::before {
+    content: '';
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    width: var(--table-order-width);
+    border-right: 1px solid var(--table-grid-thead-border-color);
+    background-color: #F0F0F0;
+}
+table.xlsx > tbody > tr::before {
+    counter-increment: ordernum;
+    content: counter(ordernum);
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: var(--table-grid-td-height) 0.2em;
+    width: var(--table-order-width);
+    font-family: initial;
+    font-size: 0.88em;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #444444;
+    border-width: 0 1px;
+    border-right-style: solid;
+    border-left-style: var(--table-border-left-style);
+    border-color: var(--table-tr-border-color);
+    background-color: #F0F0F0;
+}
+table.xlsx > tfoot > tr::before {
+    content: '';
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: 0 0.6em;
+    width: var(--table-order-width);
+    height: calc(var(--table-grid-th-height) * 2 + 1.1em);
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--table-th-font-color);
+}
+tfoot td {font-weight: bold;}
+table.xlsx > tfoot td:empty {line-height: 2em;}
+caption:empty, thead:empty, tfoot:empty, tfoot > tr:empty {display: none;}
+tbody > tr {-webkit-tap-highlight-color: transparent;}
+@media print {
+    table {--table-border-left-style: solid;--table-order-display: none;}
+    caption {display: none;}
+    table.xlsx > thead {position: initial;display: none;}
+    table.xlsx > tbody {border-top: 1px solid var(--table-grid-thead-border-color);}
+}

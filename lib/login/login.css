@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+/* CSS Document */
+:root {
+    --button-backg-color: rgb(213,100,86);
+    --button-hover-color: rgb(192,93,80);
+    --button-active-color: rgb(175,79,67);
+}
+form, fieldset, legend, label, input, button {box-sizing: border-box;}
+html, body, .container {height: 100%;}
+.container {display: flex;flex-direction: column;justify-content: space-between;}
+header, footer {flex: none;}
+h1 {font-size: 1.5em;color: rgb(172,95,89);}
+h1 > span {vertical-align: middle;}
+.logo, .back-img {background-repeat: no-repeat;background-size: contain;background-position: center;}
+.logo {display: inline-block;margin-left: 0.6em;margin-right: 0.25em;width: 1.8rem;height: 1.8rem;}
+.logo {background-image: url("https://a.chinbeker.vip:5152/img/logo/school_180x180.ico");}
+main {flex: auto;display: flex;justify-content: space-between;}
+.portrait main {flex-direction: column;align-items: center;}
+.main-back {display: flex;flex: 0 1 50%;justify-content: center;}
+.main-form {display: flex;flex: 0 1 48%;justify-content: center;align-items: center;}
+.portrait .main-back {flex: none;width: 100%;height: 23em;align-items: center;}
+.portrait .main-form {flex: auto;width: 100%;align-items: flex-start;}
+.back-img {width: 72%;max-width: 46em;min-width: 35em;height: 100%;}
+.portrait .back-img {width: 100%;max-width: none;min-width: auto;height: 100%;}
+.back-img {background-image: url("https://a.chinbeker.vip:5152/img/school/back/login.png");}
+.login-box {padding: 3.2em;width: 20%;min-width: 28em;}
+.login-box {border: 1px solid rgb(195,195,195);border-radius: 0.25em 0.25em;background-color: white;}
+.portrait .login-box {padding: 3em;margin-block: 1.3em;width: 90%;min-width: auto;max-width: 29.2em;}
+fieldset {margin: 0;padding: 0;width: 100%;border: none;}
+legend {padding: 0;font-size: 1.45em;font-weight: bold;color: rgb(214,135,55);}
+.form-account {margin-top: 3.5em;}
+.portrait .form-account {margin-top: 2.8em;}
+.form-password {margin-top: 0.45em;}
+label {display: block;}
+input[type="search"], input[type="password"] {
+    padding: 0.8em 0.6em;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204,204,204);
+    border-radius: 0.22em;
+    background-color: white;
+}
+.form-submit {margin-block: 0.8em;}
+.form-submit > button[type="button"] {width: 100%;line-height: 2.8em;}
+.text-danger {padding-left: 0.1em;font-size: 0.9em;line-height: 1em;word-break: break-all;color: red;}

@@ -1,0 +1,206 @@
+@charset "utf-8";
+html {
+    --table-font-size: 0.81em;
+    --table-border-left-style: solid;
+    --table-border-right-style: none;
+    --table-order-display: table-cell;
+    --table-order-width: 3.5em;
+    --table-line-thead-border-width: 1px;
+    --table-line-thead-border-color: #BEBEBE;
+    --table-grid-thead-border-color: #BEBEBE;
+    --table-line-thead-bgcolor: #FFEDED;
+    --table-grid-thead-bgcolor: #DFE3E8;
+    --table-line-th-border-style: solid;
+    --table-line-th-border-color: #BEBEBE;
+    --table-grid-th-border-color: #BEBEBE;
+    --table-line-th-height: 0.48em;
+    --table-line-td-height: 0.56em;
+    --table-grid-th-height: 0.35em;
+    --table-grid-td-height: 0.35em;
+    --table-th-font-color: inherit;
+    --table-td-font-color: inherit;
+    --table-td-border-color: #E7E6E6;
+    --table-tr-border-color: #E5E5E5;
+    --table-tr-even-bgcolor: #EDF2FF;
+    --table-line-tr-hover-color: #EFF5FF;
+    --table-grid-tr-hover-color: #C7D1F5;
+}
+table.grid.xlsx {
+    --table-order-width: 3em;
+    --table-grid-thead-border-color: black;
+    --table-grid-th-border-color: black;
+    --table-grid-th-height: 0.25em;
+    --table-grid-td-height: 0.25em;
+    --table-td-border-color: black;
+    --table-tr-border-color: black;
+    --table-tr-even-bgcolor: transparent;
+    --table-grid-tr-hover-color: transparent;
+}
+table, thead, tbody, tfoot, tr, th, td, caption, colgroup, col {box-sizing: border-box;}
+table {min-width: 100%;font-size: var(--table-font-size);border-collapse: collapse;border-spacing: 0;background-color: white;}
+caption {font-size: 1.2em;font-weight: bold;line-height: 2em;}
+thead {position: sticky;top: 0;z-index: 3;}
+th, td {padding-left: 0.6em;padding-right: 0.6em;white-space: nowrap;word-break: break-all;}
+th {color: var(--table-th-font-color);}
+td {color: var(--table-td-font-color);background-color: inherit;}
+table:not(.grid) th, table:not(.grid) > tfoot td {padding-block: var(--table-line-th-height);background-color: var(--table-line-thead-bgcolor);}
+table.grid th, table.grid > tfoot td {padding-block: var(--table-grid-th-height);background-color: var(--table-grid-thead-bgcolor);}
+table:not(.grid) > tbody td {padding-block: var(--table-line-td-height);}
+table.grid > tbody td {padding-block: var(--table-grid-td-height);}
+td > span:not(:first-of-type) {margin-left: 0.8em;}
+td > span > a {text-decoration-line: none;color: rgb(80,110,255);}
+table:not(.grid), table:not(.grid) > thead {
+    border-bottom-width: var(--table-line-thead-border-width);
+    border-bottom-style: solid;
+    border-bottom-color: var(--table-line-thead-border-color);
+}
+table:not(.grid) > thead {
+    border-right-width: 1px;
+    border-right-style: var(--table-border-right-style);
+    border-right-color: var(--table-line-thead-border-color);
+}
+table:not(.grid) > thead > tr > th:not(:last-of-type) {
+    border-right-width: 1px;
+    border-right-style: var(--table-line-th-border-style);
+    border-right-color: var(--table-line-th-border-color);
+}
+table:not(.grid) > tbody > tr:not(:last-of-type) {border-bottom: 1px solid var(--table-tr-border-color);}
+table:not(.grid) > tbody > tr > td:last-of-type {
+    border-right-width: 1px;
+    border-right-style: var(--table-border-right-style);
+    border-right-color: var(--table-tr-border-color);
+}
+table:not(.grid) > tfoot {
+    border-top-width: var(--table-line-thead-border-width);
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-right-style: var(--table-border-right-style);
+    border-color: var(--table-line-thead-border-color);
+}
+table.grid {border-bottom: 1px solid var(--table-grid-thead-border-color);}
+table.grid > thead {
+    border-width: 0 1px 1px 1px;
+    border-top-style: none;
+    border-left-style: var(--table-border-left-style);
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--table-grid-thead-border-color);
+}
+table.grid > thead > tr:not(:last-of-type) {border-bottom: 1px solid var(--table-grid-th-border-color);}
+table.grid > thead > tr > th:not(:last-of-type) {border-right: 1px solid var(--table-grid-th-border-color);}
+table.grid > tbody > tr:not(:last-of-type) {border-bottom: 1px solid var(--table-td-border-color);}
+table.grid > tbody > tr > td {border-right: 1px solid var(--table-td-border-color);}
+table.grid > tbody > tr > td:first-of-type {
+    border-left-width: 1px;
+    border-left-style: var(--table-border-left-style);
+    border-left-color: var(--table-td-border-color);
+}
+table.grid > tfoot {
+    border-width: 1px 1px 0 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-left-style: var(--table-border-left-style);
+    border-color: var(--table-grid-thead-border-color);
+}
+table:not(.grid) > thead, table:not(.grid) > tfoot {background-color: var(--table-line-thead-bgcolor);}
+table.grid > thead, table.grid > tfoot {background-color: var(--table-grid-thead-bgcolor);}
+table:not(.grid) > tbody > tr {background-color: white;}
+table.grid > tbody > tr:nth-of-type(odd) {background-color: white;}
+table.grid > tbody > tr:nth-of-type(even) {background-color: var(--table-tr-even-bgcolor);}
+tbody {counter-reset: ordernum;}
+table:not(.grid) > thead > tr::before {
+    content: '序号';
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: var(--table-line-th-height) 0.6em;
+    min-width: var(--table-order-width);
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: var(--table-th-font-color);
+    border-right-width: 1px;
+    border-right-style: var(--table-line-th-border-style);
+    border-right-color: var(--table-line-th-border-color);
+}
+table:not(.grid) > tbody > tr::before {
+    counter-increment: ordernum;
+    content: counter(ordernum);
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: var(--table-line-td-height) 0.6em;
+    min-width: var(--table-order-width);
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: var(--table-td-font-color);
+}
+table:not(.grid) > tfoot > tr::before {
+    content: '';
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: 0 0.6em;
+    min-width: var(--table-order-width);
+    height: calc(var(--table-line-th-height) * 2 + 1.1em);
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--table-th-font-color);
+}
+table.grid > thead > tr::before {
+    content: '序号';
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: var(--table-grid-th-height) 0.6em;
+    min-width: var(--table-order-width);
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--table-th-font-color);
+    border-right: 1px solid var(--table-grid-thead-border-color);
+}
+table.grid > tbody > tr::before {
+    counter-increment: ordernum;
+    content: counter(ordernum);
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: var(--table-grid-td-height) 0.6em;
+    min-width: var(--table-order-width);
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: var(--table-td-font-color);
+    border-width: 0 1px;
+    border-right-style: solid;
+    border-left-style: var(--table-border-left-style);
+    border-color: var(--table-tr-border-color);
+}
+table.grid > tfoot > tr::before {
+    content: '';
+    display: var(--table-order-display);
+    box-sizing: border-box;
+    padding: 0 0.6em;
+    min-width: var(--table-order-width);
+    height: calc(var(--table-grid-th-height) * 2 + 1.1em);
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--table-th-font-color);
+}
+tfoot td {font-weight: bold;}
+table.grid > tfoot td:empty {line-height: 2em;}
+caption:empty, thead:empty, tfoot:empty, tfoot > tr:empty {display: none;}
+table:not(.grid) > tbody > tr:hover {background-color: var(--table-line-tr-hover-color);}
+table.grid > tbody > tr:hover {background-color: var(--table-grid-tr-hover-color);}
+tbody > tr {-webkit-tap-highlight-color: transparent;}
+@media print {
+    table {--table-border-left-style: solid;}
+    caption {display: none;}
+    thead {position: initial;}
+    table:not(.grid) > thead {border-top: 1px solid var(--table-line-thead-border-color);}
+    table.grid > thead {border-top: 1px solid var(--table-grid-thead-border-color);}
+}
