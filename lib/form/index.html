@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="windows-Target" contect="_top">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>Form表单</title>
+    <meta http-equiv="cache-control" content="no-cache,no-store" />
+    <meta http-equiv="Pragma" contect="no-cache" />
+    <meta name="keywords" content="HTML,Form,表单" />
+    <meta name="author" content="CHINBEKER" />
+    <meta name="description" content="Form表单" />
+    <meta name="robots" content="none" />
+    <link rel="stylesheet" type="text/css" href="https://a.chinbeker.vip:5152/css/base.css" charset="utf-8" />
+    <script type="text/javascript" src="https://a.chinbeker.vip:5152/js/load.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://a.chinbeker.vip:5152/css/form.css" charset="utf-8" />
+    <script type="application/javascript" src="https://a.chinbeker.vip:5152/js/form.js" charset="utf-8" defer></script>
+</head>
+<body>
+<div class="container">
+<header></header>
+<main>
+<form id="Forms" action="" autocomplete="off">
+    <fieldset class="form-group">
+        <legend>文本框</legend>
+
+        <div class="form-item" data-name="Text">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>文本</span></div>
+                    <div class="field-describe"><span>单行文本框 input[type="text"] (minlenght, maxlenght 限制长度)</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="text" name="Text" required value="" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Text" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Search">
+            <div class="form-item-main">
+                <div class="field-info" >
+                    <div class="field-title required"><span>搜索</span></div>
+                    <div class="field-describe"><span>搜索框 input(type="search") (minlenght, maxlenght 限制长度)</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="search" name="Search" required value="" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Search" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Number">
+            <div class="form-item-main">
+                <div class="field-info" >
+                    <div class="field-title required"><span>数字</span></div>
+                    <div class="field-describe"><span>数字 input[type="number"] (min, max 限制大小范围)</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="number" name="Number" required value="" min="0" max="100" step="5" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Number" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Password">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>密码</span></div>
+                    <div class="field-describe"><span>密码框 input[type="password"] (minlenght, maxlenght 限制长度)</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="password" name="Password" required value="" minlength="6" maxlength="18" placeholder="请输入密码"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Password" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Tel">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>电话</span></div>
+                    <div class="field-describe"><span>电话号码 input[type="tel"] (minlenght, maxlenght 限制长度)</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="tel" name="Tel" required minlength="11" maxlength="11" data-value="" placeholder="请输入"></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Tel" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Url">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>网址</span></div>
+                    <div class="field-describe"><span>网址框 input[type="url"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="url" name="Url" required data-value="" placeholder="请输入"></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Url" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Email">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>邮箱</span></div>
+                    <div class="field-describe"><span>电子邮箱 input[type="email"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="email" name="Email" required data-value="" placeholder="请输入"></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Email" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Readonly">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>只读</span></div>
+                    <div class="field-describe"><span>只读字段 input[type="text"][readonly]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="text" name="Readonly" required readonly value="只读字段不能修改，会被提交" data-value=""></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Readonly" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Disabled">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>禁用</span></div>
+                    <div class="field-describe"><span>禁用字段 input[type="text"][disabled]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="text" name="Disabled" required disabled value="禁用字段不能修改，不会被提交" data-value=""></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Disabled" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Textarea">
+            <div class="form-item-main top">
+                <div class="field-info">
+                    <div class="field-title required"><span>多行文本框</span></div>
+                    <div class="field-describe"><span>多行文本框 textarea</span></div>
+                </div>
+                <div class="field-input">
+                    <label><textarea name="Textarea" required rows="8" minlength="5" placeholder="请输入"></textarea></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Textarea" inert></span></div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>日期类型</legend>
+
+        <div class="form-item" data-name="Date">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>日期</span></div>
+                    <div class="field-describe"><span>年月日 input[type="date"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="date" name="Date" required value="" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Date" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Month">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>年月</span></div>
+                    <div class="field-describe"><span>年月 input[type="month"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="month" name="Month" required value="" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Month" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Time">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>时间</span></div>
+                    <div class="field-describe"><span>时分 input[type="time"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="time" name="Time" required value="" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Time" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="TimeSec">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>时间</span></div>
+                    <div class="field-describe"><span>时分秒 input[type="time"][step="1"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="time" name="TimeSec" required value="" step="1" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="TimeSec" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="DateT">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>日期时间</span></div>
+                    <div class="field-describe"><span>年月日 时分 input[type="datetime-local"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="datetime-local" name="DateT" required value="" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="DateT" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="DateTime">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>日期时间</span></div>
+                    <div class="field-describe"><span>年月日 时分秒 input[type="datetime-local"][step="1"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="datetime-local" name="DateTime" required value="" step="1" placeholder="请输入"/></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="DateTime" inert></span></div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>选择框</legend>
+
+        <div class="form-item" data-name="Select">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>列表</span></div>
+                    <div class="field-describe"><span>选择列表 select</span></div>
+                </div>
+                <div class="field-select">
+                    <label><select name="Select" required title="请选择">
+                        <option value="" hidden>请选择</option>
+                        <option value="1">学前教育</option>
+                        <option value="2">小学</option>
+                        <option value="3">初中</option>
+                        <option value="4">高中</option>
+                        <option value="5">中职</option>
+                        <option value="6">高职</option>
+                        <option value="7">大学</option>
+                    </select></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Select" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="SelectDefault">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>列表</span></div>
+                    <div class="field-describe"><span>选择列表 select[value=""] (有默认选项)</span></div>
+                </div>
+                <div class="field-select">
+                    <label><select name="SelectDefault" required title="请选择">
+                        <option value="" hidden>请选择</option>
+                        <option value="1" selected>学前教育</option>
+                        <option value="2">小学</option>
+                        <option value="3">初中</option>
+                        <option value="4">高中</option>
+                        <option value="5">中职</option>
+                        <option value="6">高职</option>
+                        <option value="7">大学</option>
+                    </select></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="SelectDefault" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="SelectCtrl">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>列表</span></div>
+                    <div class="field-describe"><span>自定义样式选择列表</span></div>
+                </div>
+                <div class="field-input">
+                    <label class="input-select">
+                        <div class="input-icon" inert>▾</div>
+                        <input type="text" data-type="select" required readonly data-name="SelectCtrl" autocomplete="off" placeholder="请选择" title="请选择">
+                        <div class="select-option"><ol>
+                            <li data-value="小学一年级">小学一年级</li>
+                            <li data-value="小学二年级" selected>小学二年级</li>
+                            <li data-value="小学三年级">小学三年级</li>
+                            <li data-value="小学四年级">小学四年级</li>
+                            <li data-value="小学五年级">小学五年级</li>
+                            <li data-value="小学六年级">小学六年级</li>
+                            <li data-value="初中七年级">初中七年级</li>
+                            <li data-value="初中八年级">初中八年级</li>
+                            <li data-value="初中九年级">初中九年级</li>
+                            <li data-value="高中一年级">高中一年级</li>
+                            <li data-value="高中二年级">高中二年级</li>
+                            <li data-value="高中三年级">高中三年级</li>
+                        </ol></div>
+                    </label>
+                    <label class="input-hidden">
+                        <input type="text" data-type="select" name="SelectCtrl" required value="" autocomplete="off" placeholder="请输入">
+                    </label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="SelectCtrl" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Radio">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>单选</span></div>
+                    <div class="field-describe"><span>单选按钮 input[type="radio"]</span></div>
+                </div>
+                <div class="field-input">
+                    <div class="input-radio">
+                        <label><input type="radio" name="Radio" required value="1"><span>男</span></label>
+                        <label><input type="radio" name="Radio" required value="2"><span>女</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Radio" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Checkbox">
+            <div class="form-item-main top">
+                <div class="field-info">
+                    <div class="field-title required"><span>复选框</span></div>
+                    <div class="field-describe"><span>复选框 input[type="checkbox"] (一个字段有一个或多个值)</span></div>
+                </div>
+                <div class="field-input">
+                    <div class="input-checkbox" title="可多选">
+                        <label><input type="checkbox" data-name="Checkbox" value="舞蹈" /><span>舞蹈</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="唱歌" /><span>唱歌</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="篮球" /><span>篮球</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="排球" /><span>排球</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="足球" /><span>足球</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="铅球" /><span>铅球</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="跳高" /><span>跳高</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="跳远" /><span>跳远</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="羽毛球" /><span>羽毛球</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="乒乓球" /><span>乒乓球</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="田径" /><span>田径</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="标枪" /><span>标枪</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="射箭" /><span>射箭</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="柔术" /><span>柔术</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="摔跤" /><span>摔跤</span></label>
+                        <label><input type="checkbox" data-name="Checkbox" value="跆拳道" /><span>跆拳道</span></label>
+                    </div>
+                    <label class="input-hidden">
+                        <input type="text" data-type="check" name="Checkbox" required value="" autocomplete="off" placeholder="请输入">
+                    </label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Checkbox" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="CheckSet">
+            <div class="form-item-main top">
+                <div class="field-info">
+                    <div class="field-title required"><span>复选框</span></div>
+                    <div class="field-describe"><span>复选框 input[type="checkbox"] (多个布尔值字段显示到一处)</span></div>
+                </div>
+                <div class="field-input" title="可多选">
+                    <div class="input-checkbox" title="可多选">
+                        <label><input type="checkbox" name="guer" required value="1" /><span>孤儿</span></label>
+                        <label><input type="checkbox" name="canji" value="1" /><span>残疾</span></label>
+                        <label><input type="checkbox" name="jisu" value="1" /><span>寄宿生</span></label>
+                        <label><input type="checkbox" name="dibao" value="1" /><span>低保户</span></label>
+                        <label><input type="checkbox" name="tekun" value="1" /><span>特困户</span></label>
+                        <label><input type="checkbox" name="tuopin" value="1" /><span>脱贫户</span></label>
+                        <label><input type="checkbox" name="kunnan" value="1" /><span>困难家庭</span></label>
+                        <label><input type="checkbox" name="liushou" value="1" /><span>留守儿童</span></label>
+                        <label><input type="checkbox" name="danqin" value="1" /><span>单亲家庭</span></label>
+                        <label><input type="checkbox" name="zuhe" value="1" /><span>组合家庭</span></label>
+                        <label><input type="checkbox" name="dusheng" value="1" /><span>独生子女</span></label>
+                        <label><input type="checkbox" name="lieshi" value="1" /><span>烈士子女</span></label>
+                        <label><input type="checkbox" name="youfu" value="1" /><span>优抚对象</span></label>
+                        <label><input type="checkbox" name="wugong" value="1" /><span>务工人员子女</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="CheckSet" inert></span></div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>地址类型</legend>
+
+        <div class="form-item" data-name="Address">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>短地址</span></div>
+                    <div class="field-describe"><span>省市县三级行政区</span></div>
+                </div>
+                <div class="field-input">
+                    <div class="input-address">
+                        <label><select required name="Province1" data-type="addr" data-address-for="Address" data-address-name="province" title="请选择省份">
+                            <option value="" hidden>请选择</option>
+                            <option value="110000000000">北京市</option>
+                            <option value="120000000000">天津市</option>
+                            <option value="130000000000">河北省</option>
+                            <option value="140000000000">山西省</option>
+                            <option value="150000000000">内蒙古自治区</option>
+                            <option value="210000000000">辽宁省</option>
+                            <option value="220000000000">吉林省</option>
+                            <option value="230000000000">黑龙江省</option>
+                            <option value="310000000000">上海市</option>
+                            <option value="320000000000">江苏省</option>
+                            <option value="330000000000">浙江省</option>
+                            <option value="340000000000">安徽省</option>
+                            <option value="350000000000">福建省</option>
+                            <option value="360000000000">江西省</option>
+                            <option value="370000000000">山东省</option>
+                            <option value="410000000000">河南省</option>
+                            <option value="420000000000">湖北省</option>
+                            <option value="430000000000">湖南省</option>
+                            <option value="440000000000">广东省</option>
+                            <option value="450000000000">广西壮族自治区</option>
+                            <option value="460000000000">海南省</option>
+                            <option value="500000000000">重庆市</option>
+                            <option value="510000000000">四川省</option>
+                            <option value="520000000000">贵州省</option>
+                            <option value="530000000000">云南省</option>
+                            <option value="540000000000">西藏自治区</option>
+                            <option value="610000000000">陕西省</option>
+                            <option value="620000000000">甘肃省</option>
+                            <option value="630000000000">青海省</option>
+                            <option value="640000000000">宁夏回族自治区</option>
+                            <option value="650000000000">新疆维吾尔自治区</option>
+                            <option value="710000000000">台湾省</option>
+                            <option value="810000000000">香港特别行政区</option>
+                            <option value="820000000000">澳门特别行政区</option>
+                        </select></label>
+                        <label>
+                            <select name="City1" required data-type="addr" data-address-for="Address" data-address-name="city" title="请选择城市"></select>
+                        </label>
+                        <label>
+                            <select name="County1" data-type="addr" data-address-for="Address" data-address-name="county" title="请选择区县"></select>
+                        </label>
+                    </div>
+                    <label class="input-hidden">
+                        <input type="text" data-type="addr" name="Address" required autocomplete="off" placeholder="请输入" title="请输入">
+                    </label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Address" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="LongAddress">
+            <div class="form-item-main top">
+                <div class="field-info">
+                    <div class="field-title required"><span>长地址</span></div>
+                    <div class="field-describe"><span>省市县三级行政区+详细地址</span></div>
+                </div>
+                <div class="field-input">
+                    <div class="input-address">
+                        <label><select name="Province2" required data-type="address" data-address-for="LongAddress" data-address-name="province" title="请选择省份">
+                            <option value="" hidden>请选择</option>
+                            <option value="110000000000">北京市</option>
+                            <option value="120000000000">天津市</option>
+                            <option value="130000000000">河北省</option>
+                            <option value="140000000000">山西省</option>
+                            <option value="150000000000">内蒙古自治区</option>
+                            <option value="210000000000">辽宁省</option>
+                            <option value="220000000000">吉林省</option>
+                            <option value="230000000000">黑龙江省</option>
+                            <option value="310000000000">上海市</option>
+                            <option value="320000000000">江苏省</option>
+                            <option value="330000000000">浙江省</option>
+                            <option value="340000000000">安徽省</option>
+                            <option value="350000000000">福建省</option>
+                            <option value="360000000000">江西省</option>
+                            <option value="370000000000">山东省</option>
+                            <option value="410000000000">河南省</option>
+                            <option value="420000000000">湖北省</option>
+                            <option value="430000000000">湖南省</option>
+                            <option value="440000000000">广东省</option>
+                            <option value="450000000000">广西壮族自治区</option>
+                            <option value="460000000000">海南省</option>
+                            <option value="500000000000">重庆市</option>
+                            <option value="510000000000">四川省</option>
+                            <option value="520000000000">贵州省</option>
+                            <option value="530000000000">云南省</option>
+                            <option value="540000000000">西藏自治区</option>
+                            <option value="610000000000">陕西省</option>
+                            <option value="620000000000">甘肃省</option>
+                            <option value="630000000000">青海省</option>
+                            <option value="640000000000">宁夏回族自治区</option>
+                            <option value="650000000000">新疆维吾尔自治区</option>
+                            <option value="710000000000">台湾省</option>
+                            <option value="810000000000">香港特别行政区</option>
+                            <option value="820000000000">澳门特别行政区</option>
+                        </select></label>
+                        <label>
+                            <select name="City2" required data-type="address" data-address-for="LongAddress" data-address-name="city" title="请选择城市"></select>
+                        </label>
+                        <label>
+                            <select name="County2" data-type="address" data-address-for="LongAddress" data-address-name="county" title="请选择区县"></select>
+                        </label>
+                    </div>
+                    <label class="address-detail">
+                        <input type="text" readonly required data-address-for="LongAddress" placeholder="请输入详细地址" title="请输入详细地址">
+                    </label>
+                    <label class="input-hidden">
+                        <input type="text" data-type="address" name="LongAddress" required autocomplete="off" placeholder="请输入">
+                    </label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="LongAddress" inert></span></div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>其他类型</legend>
+
+        <div class="form-item" data-name="File">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>文件</span></div>
+                    <div class="field-describe"><span>文件选择器 input[type="file"]</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="file" name="File" required data-value=""></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="File" inert></span></div>
+        </div>
+
+        <div class="form-item" data-name="Files">
+            <div class="form-item-main">
+                <div class="field-info">
+                    <div class="field-title required"><span>文件多选</span></div>
+                    <div class="field-describe"><span>文件选择器 input[type="file"][multiple] 按住 Ctrl 键多选</span></div>
+                </div>
+                <div class="field-input">
+                    <label><input type="file" name="Files" required multiple data-value=""></label>
+                </div>
+            </div>
+            <div class="invalid-msgbox"><span class="text-danger" data-valmsg-for="Files" inert></span></div>
+        </div>
+    </fieldset>
+
+    <div class="form-validate">
+        <span class="text-danger" data-valmsg-for="Forms" inert>账号或密码输入不正确</span>
+    </div>
+
+    <div class="form-button">
+        <button type="button" onclick="formStyleToggle()">切换</button>
+        <button type="reset" value="reset">清除</button>
+        <button type="button" value="back">返回</button>
+        <button type="submit" value="submit">提交</button>
+    </div>
+</form>
+</main>
+<footer></footer>
+</div>
+</body>
+</html>
